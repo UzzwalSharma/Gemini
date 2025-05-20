@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
+        <p>Simchat</p>
   <button className="main_button" id="themeToggler">
   <i className='bx bx-sun'></i>
 </button>
