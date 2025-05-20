@@ -1,0 +1,241 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background-color: black;
+  
+}
+ /* .main_button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0.5rem ;
+   font-size: 1.5rem;
+   border-radius: 0.75rem;
+   border: none;
+   color:white;
+   background-color: rgb(46, 43, 43);
+   cursor: pointer;
+   transition: background 0.3s ease;
+}
+.main_button:hover{
+   background: var(--secondary-hover-color);
+} */ 
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;}
+  .nav p{
+      color: white;
+   margin-bottom: 5px;}
+    /* /* color: #585858; */
+    /* background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546); */
+
+.main .nav .img{
+    width: 40px;
+    border-radius: 50%;
+}
+.main-container{
+    max-width: 900px;
+    margin: auto;
+
+    
+}
+.main .greet {
+    margin: 50px 0px;
+    font-size: 74px;
+    font-weight: 500;
+    padding: 20px;
+    color: grey;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.main .greet span {
+    display: inline-block;
+    margin-top: 2rem;
+    background: -webkit-linear-gradient(16deg, #4b90ff, #b84cff, #ff5546);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:#4b90ff REMOVE the old color to make the gradient visible
+}
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+
+}
+.main .card{
+    height: 200px;
+    /* width: 200px; */
+    padding: 15px;
+    background-color:rgba(24, 23, 23, 0.952);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+ .main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: rgb(180, 162, 162);
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+ }
+ .main .card p{
+    color:rgb(202, 191, 191);
+    font-size: 17px;
+ }
+
+ .main .card:hover{
+    background-color:rgb(59, 54, 54) ;
+ }
+ .main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+ }
+ .search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+   background-color:rgba(24, 23, 23, 0.952);
+       padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+ }
+ .search-box img{
+    width: 24px;
+    /* height: 30px; */
+    cursor: pointer;
+    
+    
+ }
+ .search-box input{
+    flex:1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    color :white;
+ }
+ .search-box div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+ }
+ .main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+ }
+
+
+ /* yha se main changes krrha hu */
+
+
+ .response-box {
+  /* margin: 20px 0; */
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.response-text {
+  color: #333;
+  
+}
+
+.loading-text {
+  color: #888;
+  font-style: italic;
+}
+
+.result {
+  padding: 0px 5%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  color: white;   
+  /* font-size: 0px;    */
+}
+
+.result::-webkit-scrollbar {
+   display: none;
+   
+}
+.result-title{
+   margin: 40px 0px;
+   gap: 20px;
+   align-items: center;
+   display: flex;
+   /* font-size: 50px; */
+}
+.result img{
+   width: 40px;
+   border-radius: 50%;
+}
+.result-data{
+   display: flex;
+   align-items: start;
+   gap: 20px;
+}
+.loader{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.loader hr{
+   border-radius: 4px;
+   border: none;
+   background-color: #f6f7f8;
+  background:linear-gradient( to right,#ff5540 ,#4b87ff, #ff5540);
+   background-size: 800px 50px;
+   height: 20px;
+   animation: loader 3s infinite linear;
+}
+@keyframes loader {
+   0%{
+      background-position: -800px 0px;
+   }
+   100%{
+      background-position: 800px 0px;
+   }
+}
+.result-data p{
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 1.8;
+}
+@media(max-width:600px){
+   .main-bottom input{
+      flex: none;
+      width: 150px;
+   }
+   .main-bottom img{
+      width: 20px;
+   }
+   .search-box{
+      padding: 5px 10px;
+   }
+   .search-box div{
+      gap: 5px;
+   }
+}
